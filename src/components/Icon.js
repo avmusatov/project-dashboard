@@ -2,7 +2,7 @@ import React from "react";
 
 export default class Icon extends React.Component {
     state = {
-        labelVisible: false
+        labelIsVisible: false
     }
 
     showLabel = () => {
@@ -24,7 +24,7 @@ export default class Icon extends React.Component {
                 onMouseLeave={this.hideLabel}>
                 <div className={classNames.join(" ")}>
                 </div>
-                {this.state.labelVisible && label ? <span className="icon-label" hidden>{label}</span> : null}
+                {this.state.labelIsVisible && label ? <span className="icon-label" hidden>{label}</span> : null}
             </div>
         );
     }

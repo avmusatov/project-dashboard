@@ -1,8 +1,9 @@
 $hovered-color: rgba(0, 0, 0, 0.04);
 
 .toolbar {
-    position: absolute;
+    position: sticky;
     width: 100%;
+    z-index: 20;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;

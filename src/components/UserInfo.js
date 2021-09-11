@@ -23,18 +23,18 @@ export default class UserInfo extends React.Component {
             </div>)
             : null;
 
-        const { name, role, image } = this.props;
+        const { userName, userRole, userImage } = this.props;
         return (
             <button
                 className="user-info"
                 onClick={this.toggleMenu}
             >
                 <div className="user-info-main">
-                    <span className="user-info-header">{name}</span>
-                    <span className="user-info-subheader">{role}</span>
+                    <span className="user-info-header">{userName}</span>
+                    <span className="user-info-subheader">{userRole}</span>
                 </div>
                 <div className="user-info-img">
-                    <img src={image} alt="user" />
+                    <img src={userImage} alt="user" />
                 </div>
                 {menu}
             </button>

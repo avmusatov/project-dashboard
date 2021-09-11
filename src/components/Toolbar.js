@@ -1,9 +1,8 @@
 import React from "react";
 import Icon from "./Icon";
 import UserInfo from "./UserInfo";
-import avatar from "../css/img/Velazquez.jpg";
 
-const Toolbar = () => {
+const Toolbar = (props) => {
     const iconsLeftProps = [
         { type: "list", label: "List" },
         { type: "calendar", label: "Calendar" },
@@ -37,11 +36,7 @@ const Toolbar = () => {
             <ul className="toolbar-item-group">
                 {renderIconsList(iconsRightProps)}
                 <li>
-                    <UserInfo
-                        name="John Doe"
-                        role="Guest"
-                        image={avatar}
-                    />
+                    <UserInfo {...props} />
                 </li>
             </ul>
         </div>);
