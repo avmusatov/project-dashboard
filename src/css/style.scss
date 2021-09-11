@@ -1,0 +1,26 @@
+@import '_reset.scss';
+@import '_toolbar.scss';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+body {
+    font-size: 13px;
+    line-height: 1.4;
+    overflow-x: hidden;
+}
+
+button {
+    border: none;
+    background-color: inherit;
+    padding: 0;
+    margin: 0;
+}
