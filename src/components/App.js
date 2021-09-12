@@ -15,8 +15,10 @@ export default class App extends React.Component {
         return (
             <div className="main-app">
                 <Toolbar {...this.state} />
-                <div className="container">
-                    <Header {...this.state} />
+                <div className="wrapper">
+                    <div className="container">
+                        <Header {...this.state} />
+                    </div>
                 </div>
             </div>);
     }

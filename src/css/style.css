@@ -3,6 +3,7 @@
    License: none (public domain)
 */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 html,
 body,
 div,
@@ -243,48 +244,62 @@ table {
 .toolbar-item-group .user-info .login-menu .login-menu-button .icon-img {
   margin-right: 10px;
 }
-.toolbar-item-group .icon-img {
+
+.icon-img {
   width: 20px;
   height: 20px;
   background-size: cover;
 }
-.toolbar-item-group .icon-calendar {
+
+.icon-calendar {
   background-image: url("img/calendar.png");
 }
-.toolbar-item-group .icon-list {
+
+.icon-list {
   background-image: url("img/list.png");
 }
-.toolbar-item-group .icon-bell {
+
+.icon-bell {
   background-image: url("img/bell.png");
 }
-.toolbar-item-group .icon-search {
+
+.icon-search {
   background-image: url("img/search.png");
 }
-.toolbar-item-group .icon-font {
+
+.icon-font {
   background-image: url("img/font.png");
 }
-.toolbar-item-group .icon-star {
+
+.icon-star {
   background-image: url("img/star.png");
 }
-.toolbar-item-group .icon-todolist {
+
+.icon-todolist {
   background-image: url("img/to-do-list.png");
 }
-.toolbar-item-group .icon-contact-book {
+
+.icon-contact-book {
   background-image: url("img/contact-book.png");
 }
-.toolbar-item-group .icon-mail {
+
+.icon-mail {
   background-image: url("img/mail.png");
 }
-.toolbar-item-group .icon-fullscreen {
+
+.icon-fullscreen {
   background-image: url("img/fullscreen.png");
 }
-.toolbar-item-group .icon-bookmark {
+
+.icon-bookmark {
   background-image: url("img/bookmark.png");
 }
-.toolbar-item-group .icon-login {
+
+.icon-login {
   background-image: url("img/enter.png");
 }
-.toolbar-item-group .icon-register {
+
+.icon-register {
   background-image: url("img/edit.png");
 }
 
@@ -293,13 +308,13 @@ table {
 }
 
 html {
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
   font-weight: 400;
 }
 
 body {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.4;
   overflow-x: hidden;
 }
@@ -311,8 +326,94 @@ button {
   margin: 0;
 }
 
+.wrapper {
+  background: linear-gradient(to right, #252f3e 0%, #1b2330 100%);
+  margin-right: 12px;
+  border-bottom-right-radius: 20px;
+}
+
 .header {
-  padding: 0px;
+  padding-top: 24px;
+  color: #fff;
+}
+.header .greeting {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.header .greeting .greeting-main {
+  margin-right: 12px;
+  margin-left: 12px;
+}
+.header .greeting .greeting-main .greeting-main-header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.header .greeting .greeting-main .notifications-info {
+  display: flex;
+  flex-flow: row nowrap;
+  opacity: 0.6;
+  font-weight: 400;
+}
+.header .greeting .greeting-main .notifications-info span {
+  margin: 0 8px;
+}
+.header .greeting img {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+.header .header-panel {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+}
+.header .header-panel .header-caption {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0 16px;
+  height: 40px;
+  background: #313944;
+  border-top-left-radius: 10px;
+}
+.header .header-panel .header-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #313944;
+  width: 40px;
+  height: 40px;
+  margin-left: 2px;
+  border-top-right-radius: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+.header .header-panel .header-button:hover {
+  background-color: rgba(194, 194, 194, 0.575);
+}
+.header .header-panel .header-menu {
+  position: absolute;
+  left: 223px;
+  top: -3px;
+  padding: 5px 0;
+  background-color: #1b1b1b;
+  border-radius: 8px;
+}
+.header .header-panel .header-menu li {
+  font-size: 1rem;
+  padding: 6px 16px;
+  cursor: pointer;
+}
+.header .header-panel .header-menu li:hover {
+  background: rgba(90, 90, 90, 0.692);
 }
 
 .container {
