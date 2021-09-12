@@ -3,7 +3,7 @@
    License: none (public domain)
 */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 html,
 body,
 div,
@@ -156,27 +156,11 @@ table {
   align-items: center;
   padding: 0 16px;
 }
-.toolbar-item-group .icon {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 18px;
-  cursor: pointer;
-}
-.toolbar-item-group .icon:hover {
-  background-color: rgba(0, 0, 0, 0.04);
-}
-.toolbar-item-group .icon:last-child {
-  margin-right: 0px;
-}
 .toolbar-item-group .icon-label {
   display: block;
   position: absolute;
   left: -50%;
-  top: 3.5rem;
+  top: 4.05rem;
   min-width: 80px;
   padding: 3px;
   font-size: 10px;
@@ -245,6 +229,23 @@ table {
   margin-right: 10px;
 }
 
+.icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 18px;
+  cursor: pointer;
+}
+.icon:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.icon:last-child {
+  margin-right: 0px;
+}
+
 .icon-img {
   width: 20px;
   height: 20px;
@@ -303,33 +304,8 @@ table {
   background-image: url("img/edit.png");
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: "Poppins", sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-}
-
-body {
-  font-size: 15px;
-  line-height: 1.4;
-  overflow-x: hidden;
-}
-
-button {
-  border: none;
-  background-color: inherit;
-  padding: 0;
-  margin: 0;
-}
-
-.wrapper {
-  background: linear-gradient(to right, #252f3e 0%, #1b2330 100%);
-  margin-right: 12px;
-  border-bottom-right-radius: 20px;
+.icon-more {
+  background-image: url("img/more.png");
 }
 
 .header {
@@ -355,8 +331,9 @@ button {
 .header .greeting .greeting-main .notifications-info {
   display: flex;
   flex-flow: row nowrap;
+  font-size: 1.05rem;
+  font-weight: 600;
   opacity: 0.6;
-  font-weight: 400;
 }
 .header .greeting .greeting-main .notifications-info span {
   margin: 0 8px;
@@ -416,8 +393,117 @@ button {
   background: rgba(90, 90, 90, 0.692);
 }
 
+.main {
+  padding-top: 15px;
+}
+.main .main-navigation ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: left;
+  align-items: center;
+}
+.main .main-navigation ul .main-navigation-item {
+  padding: 6px 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.616);
+  border-radius: 15px;
+  cursor: pointer;
+}
+.main .main-navigation ul .main-navigation-item.active {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(0, 0, 0, 0.12);
+  cursor: default;
+}
+.main .widgets {
+  padding: 8px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+  align-items: center;
+  margin: 0 -16px;
+}
+.main .widgets li {
+  padding: 16px;
+}
+.main .widgets .widget {
+  height: 230px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 19px 1px #28282850;
+}
+.main .widgets .widget .widget-header {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.7;
+  font-weight: 500;
+}
+.main .widgets .widget .widget-header .options {
+  cursor: pointer;
+}
+.main .widgets .widget .widget-header .options:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.main .widgets .widget .widget-content {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.main .widgets .widget .widget-content .value {
+  font-size: 72px;
+  font-weight: 600;
+}
+.main .widgets .widget .widget-footer {
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+body {
+  font-size: 15px;
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+button {
+  border: none;
+  background-color: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.header-wrapper {
+  background: linear-gradient(to right, #252f3e 0%, #1b2330 100%);
+  margin-right: 12px;
+  border-bottom-right-radius: 20px;
+}
+
+.main-wrapper {
+  background-color: #f6f7f9;
+}
+
 .container {
-  width: 1570px;
+  max-width: 1570px;
   margin: 0 auto;
 }
 

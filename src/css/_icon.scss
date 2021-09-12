@@ -1,3 +1,22 @@
+.icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 18px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $hovered-color;
+    }
+
+    &:last-child {
+        margin-right: 0px;
+    }
+}
+
 .icon-img {
     width: 20px;
     height: 20px;
@@ -54,4 +73,8 @@
 
 .icon-register {
     background-image: url("img/edit.png");
+}
+
+.icon-more {
+    background-image: url("img/more.png");
 }
