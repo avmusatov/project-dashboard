@@ -1,11 +1,14 @@
 import React from "react";
-import WidgetRow from "./Widget";
+import WidgetGrid from "./WidgetGrid";
+import { Widget } from "./Widget";
+import ComplexWidget from "./ComplexWidget";
 
 const Main = () => {
     const widgets = [
-        { title: "Overdue", value: 4, label: "Tasks", footerText: "Yesterday`s overdue: 2", color: "red" },
-        { title: "Issues", value: 32, label: "Open", footerText: "Closed today: 0", color: "orange" },
-        { title: "Features", value: 42, label: "Proposals", footerText: "Implemented: 8", color: "green" }
+        { type: ComplexWidget, size: 20, list: ["Yesterday", "Today", "Tomorrow"], value: 25, label: "Due Tasks", footerText: "Completed: 7", color: "rgb(33,150,243)" },
+        { type: Widget, size: 20, title: "Overdue", value: 4, label: "Tasks", footerText: "Yesterday`s overdue: 2", color: "red" },
+        { type: Widget, size: 20, title: "Issues", value: 32, label: "Open", footerText: "Closed today: 0", color: "orange" },
+        { type: Widget, size: 20, title: "Features", value: 42, label: "Proposals", footerText: "Implemented: 8", color: "green" },
     ];
 
     return (
@@ -17,7 +20,7 @@ const Main = () => {
                     <li className="main-navigation-item">Team Members</li>
                 </ul>
             </nav>
-            <WidgetRow widgets={widgets} count={5} />
+            <WidgetGrid widgets={widgets} />
         </div>
     );
 }

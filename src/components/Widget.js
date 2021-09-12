@@ -1,41 +1,47 @@
 import React from "react";
 
-const WidgetRow = ({ widgets, count = 5 }) => {
-    const renderWidgets = (widgets) => {
-        return widgets.map((widget) => {
-            return <li
-                style={{ width: `${100 / count}%` }}
-                className="widget-element" key={widget.title}
-            >
-                <Widget {...widget} />
-            </li>;
-        });
-    }
-
-    return (
-        <ul className="widgets">
-            {renderWidgets(widgets)}
-        </ul>);
-}
-
-const Widget = ({ title, value, label, footerText, color }) => {
+const Widget = ({ title, value, label, footerText, color = "#000" }) => {
     return (
         <div className="widget">
-            <div className="widget-header">
-                <div className="widget-title">{title}</div>
-                <div className="icon">
-                    <div className="options icon-img icon-more"></div>
-                </div>
-
-            </div>
-            <div className="widget-content" style={{ color }}>
+            <WidgetHeader> {title}</WidgetHeader>
+            <WidgetContent color={color}>
                 <div className="value">{value}</div>
                 <div className="label">{label}</div>
-            </div>
-            <div className="widget-footer">
+            </WidgetContent>
+            <WidgetFooter>
                 <span>{footerText}</span>
-            </div>
-        </div>);
+            </WidgetFooter>
+        </div >
+    );
 }
 
-export default WidgetRow;
+const WidgetHeader = ({ children }) => {
+    return (
+        <div className="widget-header" >
+            <div className="widget-title">{children}</div>
+            <div className="icon">
+                <div className="options icon-img icon-more"></div>
+            </div>
+        </div>
+    );
+}
+
+const WidgetContent = ({ children, color }) => {
+    return (
+        <div className="widget-content" style={{ color }}>
+            {children}
+        </div>
+    );
+}
+
+const WidgetFooter = ({ children }) => {
+    return (
+        <div className="widget-footer">
+            {children}
+        </div>
+    );
+}
+
+export {
+    Widget, WidgetHeader, WidgetContent, WidgetFooter
+};
