@@ -1,4 +1,5 @@
 $hovered-color: rgba(0, 0, 0, 0.04);
+$toolbar-height: 4.5rem;
 
 .toolbar {
     position: sticky;
@@ -8,7 +9,7 @@ $hovered-color: rgba(0, 0, 0, 0.04);
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    height: 4rem;
+    height: $toolbar-height;
     box-shadow: 0 5px 20px 0 rgb(0 0 0 / 24%);
 }
 
@@ -61,6 +62,7 @@ $hovered-color: rgba(0, 0, 0, 0.04);
         padding: 6px 16px;
         border-radius: 17px;
         cursor: pointer;
+        font-size: .95rem;
 
         &:hover {
             background-color: $hovered-color;
@@ -76,7 +78,6 @@ $hovered-color: rgba(0, 0, 0, 0.04);
             }
 
             .user-info-header {
-                font-size: 15px;
                 font-weight: 700;
             }
 
@@ -98,10 +99,10 @@ $hovered-color: rgba(0, 0, 0, 0.04);
             padding: 8px 0;
             position: absolute;
             left: 0;
-            top: 3.5rem;
+            top: .95 * $toolbar-height;
             background-color: white;
             border-radius: 8px;
-            box-shadow: 0px 0px 32px 5px #919191;
+            box-shadow: 0px 5px 19px 1px #282828;;
 
             .login-menu-button {
                 display: flex;

@@ -145,7 +145,7 @@ table {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  height: 4rem;
+  height: 4.5rem;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.24);
 }
 
@@ -194,6 +194,7 @@ table {
   padding: 6px 16px;
   border-radius: 17px;
   cursor: pointer;
+  font-size: 0.95rem;
 }
 .toolbar-item-group .user-info:hover {
   background-color: rgba(0, 0, 0, 0.04);
@@ -207,7 +208,6 @@ table {
   text-align: right;
 }
 .toolbar-item-group .user-info .user-info-main .user-info-header {
-  font-size: 15px;
   font-weight: 700;
 }
 .toolbar-item-group .user-info .user-info-main .user-info-subheader {
@@ -225,10 +225,10 @@ table {
   padding: 8px 0;
   position: absolute;
   left: 0;
-  top: 3.5rem;
+  top: 4.275rem;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0px 0px 32px 5px #919191;
+  box-shadow: 0px 5px 19px 1px #282828;
 }
 .toolbar-item-group .user-info .login-menu .login-menu-button {
   display: flex;
