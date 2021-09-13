@@ -291,6 +291,30 @@ table {
   background-image: url("img/icons/more.png");
 }
 
+.icon-location {
+  background-image: url("img/icons/location.png");
+}
+
+.icon-rain {
+  background-image: url("img/icons/rain.png");
+}
+
+.icon-water {
+  background-image: url("img/icons/water.png");
+}
+
+.icon-wind {
+  background-image: url("img/icons/wind.png");
+}
+
+.icon-cloud {
+  background-image: url("img/icons/cloud.png");
+}
+
+.icon-compass {
+  background-image: url("img/icons/compass.png");
+}
+
 .header {
   padding-top: calc(4.5rem + 24px);
   color: #fff;
@@ -459,6 +483,31 @@ table {
 }
 .main .pie-widget-footer > div:first-child {
   border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+.main .weather {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.main .weather .weather-main {
+  padding: 20px;
+  width: 100%;
+  font-size: 40px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.main .weather .weather-main .icon-rain {
+  width: 40px;
+  height: 40px;
+}
+.main .weather .additional-info {
+  width: 100%;
+  font-size: 0.8em;
+  padding: 8px 16px;
+  justify-content: space-between;
+}
+.main .weather .additional-info .icon {
+  width: 15px;
+  height: 15px;
 }
 .main .item-list {
   width: 100%;

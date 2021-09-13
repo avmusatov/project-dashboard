@@ -129,6 +129,35 @@
         }
     }
 
+    .weather {
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+        .weather-main {
+            padding: 20px;
+            width: 100%;
+            font-size: 40px;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+            .icon-rain {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        .additional-info {
+            width: 100%;
+            font-size: .8em;
+            padding: 8px 16px;
+            justify-content: space-between;
+
+            .icon {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+
     .item-list {
         width: 100%;
 

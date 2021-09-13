@@ -7,6 +7,8 @@ import GraphWidget from "./Widgets/GraphWidget";
 import { barChart, pieChart, graphList } from "../css/img/graphs";
 import PieChartWidget from "./Widgets/PieChartWidget";
 import ScheduleWidget from "./Widgets/ScheduleWidget";
+import TimeWidget from "./Widgets/TimeWidget";
+import WeatherWidget from "./Widgets/WeatherWidget";
 
 const Main = () => {
     const todoList = [
@@ -24,6 +26,8 @@ const Main = () => {
         { id: 2, type: BasicWidget, size: 25, title: "Overdue", value: 4, label: "Tasks", footerText: "Yesterday`s overdue: 2", color: "red" },
         { id: 3, type: BasicWidget, size: 25, title: "Issues", value: 32, label: "Open", footerText: "Closed today: 0", color: "orange" },
         { id: 4, type: BasicWidget, size: 25, title: "Features", value: 42, label: "Proposals", footerText: "Implemented: 8", color: "green" },
+        { id: 8, type: TimeWidget, size: 25 },
+        { id: 9, type: WeatherWidget, size: 25, city: "New York" },
         { id: 5, type: GraphWidget, size: 100, title: "Github Issues", mainGraph: barChart, graphList },
         { id: 6, type: PieChartWidget, size: 50, title: "Task Distribution", list: ["This week", "Last week", "2 Weeks Ago"], graph: pieChart },
         { id: 7, type: ScheduleWidget, size: 50, title: "Schedule", items: ["Today", "Tomorrow"], todoList },

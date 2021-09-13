@@ -1,5 +1,5 @@
 import React from "react";
-import { WidgetHeader, WidgetContent, WidgetFooter } from "./Widget";
+import { WidgetHeader, WidgetContent } from "./Widget";
 import Select from "../Select";
 import ItemList from "../ItemList";
 
