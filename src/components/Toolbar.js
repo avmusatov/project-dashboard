@@ -46,18 +46,20 @@ export default class Toolbar extends React.Component {
         ];
 
         return (
-            <div
-                className="toolbar"
-                onClick={this.toggleLoginMenu}>
-                <ul className="toolbar-item-group">
-                    {this.renderIconsList(iconsLeftProps)}
-                </ul>
-                <ul className="toolbar-item-group">
-                    {this.renderIconsList(iconsRightProps)}
-                    <li>
-                        <UserInfo {...this.props} {...this.state} />
-                    </li>
-                </ul>
+            <div className="toolbar-wrapper">
+                <div
+                    className="toolbar flex-row-nowrap"
+                    onClick={this.toggleLoginMenu}>
+                    <ul className="toolbar-item-group flex-row-nowrap">
+                        {this.renderIconsList(iconsLeftProps)}
+                    </ul>
+                    <ul className="toolbar-item-group flex-row-nowrap">
+                        {this.renderIconsList(iconsRightProps)}
+                        <li>
+                            <UserInfo {...this.props} {...this.state} />
+                        </li>
+                    </ul>
+                </div>
             </div>
         );
     }

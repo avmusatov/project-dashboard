@@ -1,104 +1,87 @@
 $hovered-color: rgba(0, 0, 0, 0.04);
 $toolbar-height: 4.5rem;
 
-.toolbar {
-    position: sticky;
+.toolbar-wrapper {
     width: 100%;
-    z-index: 20;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    height: $toolbar-height;
-    box-shadow: 0 5px 20px 0 rgb(0 0 0 / 24%);
-}
+    position: fixed;
+    z-index: 999;
 
-.toolbar-item-group {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: left;
-    align-items: center;
-    padding: 0 16px;
-
-    .icon-label {
-        display: block;
-        position: absolute;
-        left: -50%;
-        top: .9 * $toolbar-height;
-        min-width: 80px;
-        padding: 3px;
-        font-size: 10px;
-        font-weight: 700;
-        text-align: center;
-        color: rgb(226, 226, 226);
-        background-color: rgba(0, 0, 0, 0.6);
-        border-radius: 7px;
+    .toolbar {
+        justify-content: space-between;
+        background-color: #fff;
+        width: 100%;
+        height: $toolbar-height;
+        box-shadow: 0 5px 20px 0 rgb(0 0 0 / 24%);
     }
 
-    .user-info {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        position: relative;
-        padding: 6px 16px;
-        border-radius: 17px;
-        cursor: pointer;
-        font-size: .95rem;
+    .toolbar-item-group {
+        justify-content: left;
+        padding: 0 16px;
 
-        &:hover {
-            background-color: $hovered-color;
-        }
-
-        .user-info-main {
-            display: flex;
-            flex-direction: column;
-            margin-right: 15px;
-
-            span {
-                text-align: right;
-            }
-
-            .user-info-header {
-                font-weight: 700;
-            }
-
-            .user-info-subheader {
-                opacity: 0.7;
-            }
-        }
-
-        img {
-            width: 40px;
-            height: 40px;
-            border-radius: 20px;
-        }
-
-        .login-menu {
-            display: flex;
-            width: 100%;
-            flex-direction: column;
-            padding: 8px 0;
+        .icon-label {
+            display: block;
             position: absolute;
-            left: 0;
-            top: .95 * $toolbar-height;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0px 5px 19px 1px #282828;
+            left: -50%;
+            top: .9 * $toolbar-height;
+            min-width: 80px;
+            padding: 3px;
+            font-size: 10px;
+            font-weight: 700;
+            text-align: center;
+            color: rgb(226, 226, 226);
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 7px;
+        }
 
-            .login-menu-button {
-                display: flex;
-                flex-flow: row nowrap;
-                align-items: center;
-                padding: 6px 16px;
-                cursor: pointer;
-                width: 100%;
+        .user-info {
+            position: relative;
+            padding: 6px 16px;
+            border-radius: 17px;
+            cursor: pointer;
+            font-size: .95rem;
 
-                &:hover {
-                    background-color: $hovered-color;
+            &:hover {
+                background-color: $hovered-color;
+            }
+
+            .user-info-main {
+                padding-right: 15px;
+                align-items: flex-end;
+
+                .user-info-header {
+                    font-weight: 700;
                 }
+            }
 
-                .icon-img {
-                    margin-right: 10px;
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 20px;
+            }
+
+            .login-menu {
+                width: 100%;
+                padding: 8px 0;
+                position: absolute;
+                left: 0;
+                top: .95 * $toolbar-height;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0px 5px 19px 1px #282828;
+
+                .login-menu-button {
+                    justify-content: left;
+                    padding: 6px 16px;
+                    cursor: pointer;
+                    width: 100%;
+
+                    &:hover {
+                        background-color: $hovered-color;
+                    }
+                    
+                    .button-img {
+                        margin-right: 10px;
+                    }
                 }
             }
         }

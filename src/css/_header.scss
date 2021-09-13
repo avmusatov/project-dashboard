@@ -1,17 +1,13 @@
 .header {
-    padding-top: 24px;
+    padding-top: calc(4.5rem + 24px);
     color: #fff;
 
     .greeting {
-        display: flex;
-        flex-flow: row nowrap;
         justify-content: left;
-        align-items: center;
         margin-bottom: 30px;
 
         .greeting-main {
-            margin-right: 12px;
-            margin-left: 12px;
+            margin: 0 12px;
 
             .greeting-main-header {
                 font-size: 2.5rem;
@@ -20,15 +16,8 @@
             }
 
             .notifications-info {
-                display: flex;
-                flex-flow: row nowrap;
                 font-size: 1.05rem;
                 font-weight: 600;
-                opacity: .6;
-
-                span {
-                    margin: 0 8px;
-                }
             }
         }
 
@@ -40,16 +29,10 @@
     }
 
     .header-panel {
-        display: flex;
-        flex-flow: row nowrap;
         justify-content: left;
-        align-items: center;
         position: relative;
 
         .header-caption {
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
             padding: 0 16px;
             height: 40px;
             background: rgb(49, 57, 68);
@@ -57,9 +40,6 @@
         }
 
         .header-button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             background: rgb(49, 57, 68);
             width: 40px;
             height: 40px;

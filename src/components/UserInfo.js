@@ -4,23 +4,23 @@ const UserInfo = (props) => {
     const { userName, userRole, userImage, loginMenuVisible } = props;
 
     const menu = loginMenuVisible
-        ? (<div className="login-menu">
-            <button className="login-menu-button">
-                <div className="icon-img icon-login"></div>
+        ? (<div className="login-menu flex-column">
+            <button className="login-menu-button flex-row-nowrap">
+                <div className="button-img icon-img icon-login"></div>
                 <span>Login</span>
             </button>
-            <button className="login-menu-button">
-                <div className="icon-img icon-register"></div>
+            <button className="login-menu-button flex-row-nowrap">
+                <div className="button-img icon-img icon-register"></div>
                 <span>Register</span>
             </button>
         </div>)
         : null;
 
     return (
-        <div className="user-info">
-            <div className="user-info-main">
+        <div className="user-info flex-row-nowrap">
+            <div className="user-info-main flex-column">
                 <span className="user-info-header">{userName}</span>
-                <span className="user-info-subheader">{userRole}</span>
+                <span className="transparent">{userRole}</span>
             </div>
             <div className="user-info-img">
                 <img src={userImage} alt="user" />

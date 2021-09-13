@@ -28,20 +28,19 @@ export default class Header extends React.Component {
             <div
                 className="header"
                 onClick={this.toggleHeaderMenu}>
-                <div className="greeting">
+                <div className="greeting flex-row-nowrap">
                     <img src={userImage} alt={userName} />
                     <div className="greeting-main">
                         <h2 className="greeting-main-header">Welcome back, {userName}!</h2>
-                        <div className="notifications-info">
-                            <span>You have 2 new messages and 15 new tasks!</span>
-                        </div>
+                        <span className="notification-info transparent">
+                            You have 2 new messages and 15 new tasks!
+                        </span>
                     </div>
                 </div>
-                <div className="header-panel">
-                    <div className="header-caption">ACME Corp. Backend App</div>
+                <div className="header-panel flex-row-nowrap">
+                    <div className="header-caption flex-row-nowrap">ACME Corp. Backend App</div>
                     <button
                         className="header-button"
-                    // onClick={this.openHeaderMenu}
                     >
                         ...
                     </button>
