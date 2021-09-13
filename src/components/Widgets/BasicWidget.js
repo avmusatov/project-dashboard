@@ -17,7 +17,7 @@ const BasicWidget = ({ title, value, label, footerText, color = "#000" }) => {
                 <div className="label">{label}</div>
             </WidgetContent>
             <WidgetFooter>
-                <span className="transparent">{footerText}</span>
+                <div style={{padding: "12px"}} className="transparent">{footerText}</div>
             </WidgetFooter>
         </div >
     );

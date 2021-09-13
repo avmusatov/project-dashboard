@@ -34,12 +34,12 @@
 
     .widget-container {
         background-color: #fff;
-        padding: 12px;
         border-radius: 12px;
         box-shadow: 0px 5px 19px 1px #28282850;
     }
 
     .widget-header {
+        padding: 12px;
         width: 100%;
         justify-content: space-between;
 
@@ -47,7 +47,7 @@
             font-weight: 500;
         }
 
-        .widget-select {
+        .select {
             select {
                 display: block;
                 padding: 8px 24px 8px 0px;
@@ -98,6 +98,33 @@
 
             img {
                 width: 95%;
+            }
+        }
+    }
+
+    .pie-widget-graph {
+        img {
+            width: 100%;
+        }
+    }
+
+    .pie-widget-footer {
+        width: 100%;
+        padding: 8px;
+        justify-content: space-between;
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+
+        &>div {
+            padding: 16px 0;
+            width: 50%;
+
+            .value {
+                font-size: 30px;
+                font-weight: 500;
+            }
+
+            &:first-child {
+                border-right: 1px solid rgba(0, 0, 0, 0.12);
             }
         }
     }

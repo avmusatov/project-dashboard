@@ -4,7 +4,8 @@ import Navigation from "./Navigation";
 import BasicWidget from "./Widgets/BasicWidget";
 import ComplexWidget from "./Widgets/ComplexWidget";
 import GraphWidget from "./Widgets/GraphWidget";
-import { barChart, graphList } from "../css/img/graphs";
+import { barChart, pieChart, graphList } from "../css/img/graphs";
+import PieChartWidget from "./Widgets/PieChartWidget";
 
 const Main = () => {
     const widgets = [
@@ -13,6 +14,7 @@ const Main = () => {
         { id: 3, type: BasicWidget, size: 20, title: "Issues", value: 32, label: "Open", footerText: "Closed today: 0", color: "orange" },
         { id: 4, type: BasicWidget, size: 20, title: "Features", value: 42, label: "Proposals", footerText: "Implemented: 8", color: "green" },
         { id: 5, type: GraphWidget, size: 80, title: "Github Issues", mainGraph: barChart, graphList },
+        { id: 6, type: PieChartWidget, size: 40, title: "Task Distribution", list: ["This week", "Last week", "2 Weeks Ago"], graph: pieChart }
     ];
 
     const navItems = [

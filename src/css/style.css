@@ -388,18 +388,18 @@ table {
 }
 .main .widget-container {
   background-color: #fff;
-  padding: 12px;
   border-radius: 12px;
   box-shadow: 0px 5px 19px 1px #28282850;
 }
 .main .widget-header {
+  padding: 12px;
   width: 100%;
   justify-content: space-between;
 }
 .main .widget-header .title {
   font-weight: 500;
 }
-.main .widget-header .widget-select select {
+.main .widget-header .select select {
   display: block;
   padding: 8px 24px 8px 0px;
   font-weight: 600;
@@ -439,6 +439,26 @@ table {
 }
 .main .graph-grid .graph-grid-item img {
   width: 95%;
+}
+.main .pie-widget-graph img {
+  width: 100%;
+}
+.main .pie-widget-footer {
+  width: 100%;
+  padding: 8px;
+  justify-content: space-between;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+.main .pie-widget-footer > div {
+  padding: 16px 0;
+  width: 50%;
+}
+.main .pie-widget-footer > div .value {
+  font-size: 30px;
+  font-weight: 500;
+}
+.main .pie-widget-footer > div:first-child {
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 * {
