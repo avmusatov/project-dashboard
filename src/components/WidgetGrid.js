@@ -16,7 +16,7 @@ const WidgetGrid = ({ widgets }) => {
     }
 
     return (
-        <ul className="widgets">
+        <ul className="widgets flex-wrap">
             {renderWidgets(widgets)}
         </ul>
     );
