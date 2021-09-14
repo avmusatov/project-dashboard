@@ -371,6 +371,7 @@ table {
   padding: 5px 0;
   background-color: #1b1b1b;
   border-radius: 8px;
+  z-index: 100;
 }
 .header .header-panel .header-menu li {
   font-size: 1rem;
@@ -431,9 +432,6 @@ table {
 }
 .main .widget-header .options {
   cursor: pointer;
-}
-.main .widget-header .options:hover {
-  background-color: rgba(0, 0, 0, 0.04);
 }
 .main .widget-content {
   font-size: 1.3rem;
@@ -530,6 +528,22 @@ table {
   font-size: 0.8em;
 }
 
+.widgets-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative;
+}
+.widgets-section .widgets-column {
+  padding-top: 16px;
+  position: absolute;
+  top: -215px;
+  left: 80%;
+  width: 20%;
+  z-index: 20;
+  background-color: #f6f7f9;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -561,6 +575,8 @@ button {
   background: linear-gradient(to right, #252f3e 0%, #1b2330 100%);
   margin-right: 12px;
   border-bottom-right-radius: 20px;
+  background-size: cover;
+  background-color: #1b2330;
 }
 
 .main-wrapper {

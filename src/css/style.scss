@@ -37,6 +37,8 @@ button {
     background: linear-gradient(to right, #252f3e 0%, #1b2330 100%);
     margin-right: 12px;
     border-bottom-right-radius: 20px;
+    background-size: cover;
+    background-color: #1b2330;
 }
 
 .main-wrapper {
@@ -78,7 +80,7 @@ button {
     opacity: 0.7;
 }
 
-@media (max-width: 1600px) { 
+@media (max-width: 1600px) {
     .container {
         max-width: 95%;
     }

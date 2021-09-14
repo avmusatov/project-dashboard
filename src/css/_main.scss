@@ -58,10 +58,6 @@
 
         .options {
             cursor: pointer;
-
-            &:hover {
-                background-color: rgba(0, 0, 0, 0.04);
-            }
         }
     }
 
@@ -139,7 +135,7 @@
             font-size: 40px;
             font-weight: 500;
             border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-            
+
             .icon-rain {
                 width: 40px;
                 height: 40px;
@@ -183,5 +179,22 @@
                 font-size: .8em;
             }
         }
+    }
+}
+
+.widgets-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+
+    .widgets-column{
+        padding-top: 16px;
+        position: absolute;
+        top: -215px;
+        left: 80%;
+        width: 20%;
+        z-index: 20;
+        background-color: #f6f7f9;
     }
 }

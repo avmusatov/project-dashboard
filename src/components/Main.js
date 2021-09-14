@@ -9,6 +9,7 @@ import PieChartWidget from "./Widgets/PieChartWidget";
 import ScheduleWidget from "./Widgets/ScheduleWidget";
 import TimeWidget from "./Widgets/TimeWidget";
 import WeatherWidget from "./Widgets/WeatherWidget";
+import WidgetColumn from "./WidgetColumn";
 
 const Main = () => {
     const todoList = [
@@ -29,17 +30,19 @@ const Main = () => {
         { id: 5, day: "Thursday", temperature: 24, icon: "icon-cloud" },
     ];
 
-    const widgets = [
+    const widgetsInGrid = [
         { id: 1, type: ComplexWidget, size: 25, list: ["Yesterday", "Today", "Tomorrow"], value: 25, label: "Due Tasks", footerText: "Completed: 7", color: "rgb(33,150,243)" },
         { id: 2, type: BasicWidget, size: 25, title: "Overdue", value: 4, label: "Tasks", footerText: "Yesterday`s overdue: 2", color: "red" },
         { id: 3, type: BasicWidget, size: 25, title: "Issues", value: 32, label: "Open", footerText: "Closed today: 0", color: "orange" },
         { id: 4, type: BasicWidget, size: 25, title: "Features", value: 42, label: "Proposals", footerText: "Implemented: 8", color: "green" },
-        { id: 8, type: TimeWidget, size: 25 },
-        { id: 9, type: WeatherWidget, size: 25, city: "New York", weatherForecast },
         { id: 5, type: GraphWidget, size: 100, title: "Github Issues", mainGraph: barChart, graphList },
         { id: 6, type: PieChartWidget, size: 50, title: "Task Distribution", list: ["This week", "Last week", "2 Weeks Ago"], graph: pieChart },
         { id: 7, type: ScheduleWidget, size: 50, title: "Schedule", items: ["Today", "Tomorrow"], todoList },
+    ];
 
+    const widgetsInColumn = [
+        { id: 1, type: TimeWidget, size: 25 },
+        { id: 2, type: WeatherWidget, size: 25, city: "New York", weatherForecast },
     ];
 
     const navItems = [
@@ -49,10 +52,16 @@ const Main = () => {
     ];
 
     return (
-        <div className="main">
-            <Navigation items={navItems} />
-            <WidgetGrid widgets={widgets} />
-
+        <div className="main-wrapper">
+            <div className="container">
+                <div className="main">
+                    <Navigation items={navItems} />
+                    <div className="widgets-section">
+                        <WidgetGrid widgets={widgetsInGrid} />
+                        <WidgetColumn widgets={widgetsInColumn} />
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
