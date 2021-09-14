@@ -12,13 +12,21 @@ import WeatherWidget from "./Widgets/WeatherWidget";
 
 const Main = () => {
     const todoList = [
-        { title: "Group Meeting", subtitle: "In 32 minutes" },
-        { title: "Coffee Break", subtitle: "10:30 AM" },
-        { title: "Public Beta Release", subtitle: "11:00 AM" },
-        { title: "Lunch", subtitle: "12:10 PM" },
-        { title: "Dinner with David", subtitle: "17:30 PM" },
-        { title: "Jane's Birthday Party", subtitle: "19:30 PM" },
-        { title: "Overseer's Retirement Party", subtitle: "21:30 PM" },
+        { id: 1, title: "Group Meeting", subtitle: "In 32 minutes" },
+        { id: 2, title: "Coffee Break", subtitle: "10:30 AM" },
+        { id: 3, title: "Public Beta Release", subtitle: "11:00 AM" },
+        { id: 4, title: "Lunch", subtitle: "12:10 PM" },
+        { id: 5, title: "Dinner with David", subtitle: "17:30 PM" },
+        { id: 6, title: "Jane's Birthday Party", subtitle: "19:30 PM" },
+        { id: 7, title: "Overseer's Retirement Party", subtitle: "21:30 PM" },
+    ];
+
+    const weatherForecast = [
+        { id: 1, day: "Sunday", temperature: 21, icon: "icon-rain" },
+        { id: 2, day: "Monday", temperature: 19, icon: "icon-wind" },
+        { id: 3, day: "Tuesday", temperature: 24, icon: "icon-cloud" },
+        { id: 4, day: "Wednesday", temperature: 21, icon: "icon-rain" },
+        { id: 5, day: "Thursday", temperature: 24, icon: "icon-cloud" },
     ];
 
     const widgets = [
@@ -27,7 +35,7 @@ const Main = () => {
         { id: 3, type: BasicWidget, size: 25, title: "Issues", value: 32, label: "Open", footerText: "Closed today: 0", color: "orange" },
         { id: 4, type: BasicWidget, size: 25, title: "Features", value: 42, label: "Proposals", footerText: "Implemented: 8", color: "green" },
         { id: 8, type: TimeWidget, size: 25 },
-        { id: 9, type: WeatherWidget, size: 25, city: "New York" },
+        { id: 9, type: WeatherWidget, size: 25, city: "New York", weatherForecast },
         { id: 5, type: GraphWidget, size: 100, title: "Github Issues", mainGraph: barChart, graphList },
         { id: 6, type: PieChartWidget, size: 50, title: "Task Distribution", list: ["This week", "Last week", "2 Weeks Ago"], graph: pieChart },
         { id: 7, type: ScheduleWidget, size: 50, title: "Schedule", items: ["Today", "Tomorrow"], todoList },
