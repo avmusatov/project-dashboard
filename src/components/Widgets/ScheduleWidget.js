@@ -2,6 +2,7 @@ import React from "react";
 import { WidgetHeader, WidgetContent } from "./Widget";
 import Select from "../Select";
 import ItemList from "../ItemList";
+import Icon from "../Icon";
 
 const ScheduleWidget = ({ title, items, todoList, color = "#000" }) => {
     const itemList = todoList.map(({ id, title, subtitle }) => {
@@ -13,11 +14,7 @@ const ScheduleWidget = ({ title, items, todoList, color = "#000" }) => {
                     <div className="item-subtitle transparent">{subtitle}</div>
                 </div>
             ),
-            right: (
-                <div className="icon">
-                    <div className="options icon-img icon-more"></div>
-                </div>
-            )
+            right: <Icon type="more" />
         }
     });
 

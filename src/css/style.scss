@@ -1,3 +1,4 @@
+@import '_variables.scss';
 @import '_reset.scss';
 @import '_toolbar.scss';
 @import '_icon.scss';
@@ -12,13 +13,11 @@
 
 html {
     font-family: 'Poppins', sans-serif;
-    font-size: 13px;
-    font-weight: 400;
+    font-size: $base-font-size;
 }
 
 body {
-    font-size: 15px;
-    line-height: 1.4;
+    line-height: 1.2;
     overflow-x: hidden;
 }
 
@@ -33,16 +32,8 @@ button {
     position: relative;
 }
 
-.header-wrapper {
-    background: linear-gradient(to right, #252f3e 0%, #1b2330 100%);
-    margin-right: 12px;
-    border-bottom-right-radius: 20px;
-    background-size: cover;
-    background-color: #1b2330;
-}
-
 .main-wrapper {
-    background-color: #f6f7f9;
+    background-color: $main-bgcolor;
 }
 
 .container {

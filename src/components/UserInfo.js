@@ -22,9 +22,7 @@ const UserInfo = (props) => {
                 <span className="user-info-header">{userName}</span>
                 <span className="transparent">{userRole}</span>
             </div>
-            <div className="user-info-img">
-                <img src={userImage} alt="user" />
-            </div>
+            <img src={userImage} alt={userName} />
             {menu}
         </div>
     );

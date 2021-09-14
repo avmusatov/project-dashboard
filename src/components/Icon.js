@@ -15,16 +15,19 @@ export default class Icon extends React.Component {
 
     render() {
         const { type, label } = this.props;
-        const classNames = ["icon-img", `icon-${type}`];
+
+        const labelElement = this.state.labelIsVisible && label
+            ? <span className="icon-label" hidden>{label}</span>
+            : null;
 
         return (
             <div
                 className="icon"
                 onMouseEnter={this.showLabel}
-                onMouseLeave={this.hideLabel}>
-                <div className={classNames.join(" ")}>
-                </div>
-                {this.state.labelIsVisible && label ? <span className="icon-label" hidden>{label}</span> : null}
+                onMouseLeave={this.hideLabel}
+            >
+                <div className={`icon-img icon-${type} transparent`}></div>
+                {labelElement}
             </div>
         );
     }

@@ -29,14 +29,16 @@ export default class Header extends React.Component {
                 <div className="container">
                     <div
                         className="header"
-                        onClick={this.toggleHeaderMenu}>
+                        onClick={this.toggleHeaderMenu}
+                    >
                         <div className="greeting flex-row-nowrap">
                             <img src={userImage} alt={userName} />
                             <div className="greeting-main">
-                                <h2 className="greeting-main-header">Welcome back, {userName}!</h2>
-                                <span className="notification-info transparent">
-                                    You have 2 new messages and 15 new tasks!
-                                </span>
+                                <div className="greeting-main-header">Welcome back, {userName}!</div>
+                                <div className="notifications-info transparent">
+                                    <div className="icon-img icon-bell"></div>
+                                    <div>You have 2 new messages and 15 new tasks!</div>
+                                </div>
                             </div>
                         </div>
                         <div className="header-panel flex-row-nowrap">

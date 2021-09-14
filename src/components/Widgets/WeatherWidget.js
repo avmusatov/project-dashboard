@@ -1,6 +1,7 @@
 import React from "react";
 import ItemList from "../ItemList";
 import { WidgetHeader, WidgetContent, WidgetFooter } from "./Widget";
+import Icon from "../Icon";
 
 const WeatherWidget = ({ city, weatherForecast }) => {
     const headerTitle = (
@@ -10,24 +11,18 @@ const WeatherWidget = ({ city, weatherForecast }) => {
         </div>
     );
 
-    const headerOptions = (
-        <div className="icon">
-            <div className="options icon-img icon-more"></div>
-        </div>
-    );
-
     const itemList = weatherForecast.map(({ id, day, temperature, icon }) => {
         return {
             id,
             left: (
                 <div className="flex-column">
-                    <div>{day}</div>
+                    <div style={{ fontSize: "1.1rem" }}>{day}</div>
                 </div>
             ),
             right: (
                 <div className="flex-row-nowrap">
                     <div style={{ marginRight: "10px" }} className={`icon-img ${icon}`}></div>
-                    <div style={{fontSize: "1.5rem"}}>{temperature} <span className="transparent">°C</span></div>
+                    <div style={{ fontSize: "1.5rem" }}>{temperature} <span className="transparent">°C</span></div>
                 </div>
             )
         }
@@ -37,7 +32,7 @@ const WeatherWidget = ({ city, weatherForecast }) => {
         <div className="widget-container">
             <WidgetHeader
                 title={headerTitle}
-                options={headerOptions}
+                options={<Icon type="more" />}
             />
             <WidgetContent>
                 <div className="weather flex-column">
@@ -64,6 +59,7 @@ const WeatherWidget = ({ city, weatherForecast }) => {
             <WidgetFooter>
                 <ItemList items={itemList} />
             </WidgetFooter>
+            <div style={{ paddingTop: "20px" }}></div>
         </div >
     );
 }

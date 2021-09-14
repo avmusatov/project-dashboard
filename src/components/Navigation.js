@@ -3,10 +3,7 @@ import React from "react";
 const Navigation = ({ items }) => {
     const renderItems = (items) => {
         return items.map(({ header, active }) => {
-            let classNames = "navigation-item";
-            if (active) {
-                classNames += " active";
-            }
+            let classNames = `navigation-item ${active ? "active" : "transparent"}`;
 
             return (
                 <li className={classNames} key={header}>
