@@ -6,8 +6,7 @@ const WidgetGrid = ({ widgets }) => {
             const View = widget.type;
 
             return <li
-                style={{ width: `${widget.size}%` }}
-                className="widget-wrapper"
+                className={`widget-wrapper ${widget.size}-width`}
                 key={widget.id}
             >
                 <View {...widget} />

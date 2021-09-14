@@ -71,8 +71,48 @@ button {
     opacity: 0.7;
 }
 
+.full-width {
+    width: 100%;
+}
+
+.half-width {
+    width: 50%;
+}
+
+.quater-width {
+    width: 25%;
+}
+
 @media (max-width: 1600px) {
     .container {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .container {
         max-width: 95%;
+    }
+
+    .widgets-column {
+        display: none;
+    }
+
+    .main .widgets {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 16px;
+    }
+
+    .quater-width {
+        width: 50%;
+    }
+
+    .half-width {
+        width: 100%;
     }
 }
