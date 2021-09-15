@@ -31,6 +31,7 @@ button {
 
 .main-app {
     position: relative;
+    background-color: $main-bgcolor;
 }
 
 .main-wrapper {
@@ -95,6 +96,14 @@ button {
         max-width: 95%;
     }
 
+    .chat {
+        display: none;
+    }
+
+    .chat-panel {
+        display: none;
+    }
+
     .widgets-column {
         display: none;
     }
@@ -105,6 +114,10 @@ button {
 }
 
 @media (max-width: 1024px) {
+    .container {
+        max-width: 98%;
+    }
+
     html {
         font-size: 16px;
     }

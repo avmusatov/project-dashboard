@@ -155,7 +155,7 @@ table {
 }
 .toolbar-wrapper .chat {
   width: 68px;
-  height: 61px;
+  height: 63px;
   cursor: pointer;
 }
 .toolbar-wrapper .toolbar-item-group {
@@ -327,7 +327,6 @@ table {
 .header-wrapper {
   padding-top: 61px;
   background: linear-gradient(to right, #252f3e 0%, #1b2330 100%);
-  margin-right: 64px;
   border-bottom-right-radius: 20px;
   background-size: cover;
   background-color: #1b2330;
@@ -653,7 +652,6 @@ table {
   left: 80%;
   width: 20%;
   z-index: 20;
-  background-color: #f6f7f9;
 }
 
 * {
@@ -679,6 +677,7 @@ button {
 
 .main-app {
   position: relative;
+  background-color: #f6f7f9;
 }
 
 .main-wrapper {
@@ -742,6 +741,14 @@ button {
     max-width: 95%;
   }
 
+  .chat {
+    display: none;
+  }
+
+  .chat-panel {
+    display: none;
+  }
+
   .widgets-column {
     display: none;
   }
@@ -751,6 +758,10 @@ button {
   }
 }
 @media (max-width: 1024px) {
+  .container {
+    max-width: 98%;
+  }
+
   html {
     font-size: 16px;
   }
