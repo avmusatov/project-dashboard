@@ -3,6 +3,8 @@ import Toolbar from "./Toolbar";
 import Header from "./Header";
 import Main from "./Main";
 import userImage from "../css/img/Velazquez.jpg";
+import ChatPanel from "./ChatPanel";
+import contacts from "../css/img/contacts";
 
 export default class App extends React.Component {
     state = {
@@ -15,6 +17,7 @@ export default class App extends React.Component {
         return (
             <div className="main-app">
                 <Toolbar {...this.state} />
+                <ChatPanel contacts={contacts} />
                 <Header {...this.state} />
                 <Main />
             </div>);

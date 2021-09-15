@@ -17,7 +17,7 @@ export default class Icon extends React.Component {
         const { type, label } = this.props;
 
         const labelElement = this.state.labelIsVisible && label
-            ? <span className="icon-label" hidden>{label}</span>
+            ? <span className="icon-label">{label}</span>
             : null;
 
         return (

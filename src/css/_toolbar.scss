@@ -11,6 +11,17 @@
         box-shadow: $shadow;
     }
 
+    .toolbar-inner {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .chat {
+        width: $chat-panel-width;
+        height: $toolbar-height;
+        cursor: pointer;
+    }
+
     .toolbar-item-group {
         justify-content: left;
         padding: 0 16px;

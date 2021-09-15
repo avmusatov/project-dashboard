@@ -104,7 +104,7 @@
         width: 100%;
         padding: 8px;
         justify-content: space-between;
-        border-top: 1px solid rgba(0, 0, 0, 0.12);
+        border-top: $border;
 
         &>div {
             padding: 16px 0;
@@ -116,21 +116,21 @@
             }
 
             &:first-child {
-                border-right: 1px solid rgba(0, 0, 0, 0.12);
+                border-right: $border;
             }
         }
     }
 
     .weather {
         width: 100%;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        border-bottom: $border;
 
         .weather-main {
             padding: 20px;
             width: 100%;
             font-size: 40px;
             font-weight: 500;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+            border-bottom: $border;
 
             .icon-rain {
                 width: 40px;
