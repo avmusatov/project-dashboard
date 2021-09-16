@@ -1,23 +1,25 @@
 {
   "files": {
-    "main.css": "/project-dashboard/static/css/main.70d85a6c.chunk.css",
-    "main.js": "/project-dashboard/static/js/main.7469766e.chunk.js",
-    "main.js.map": "/project-dashboard/static/js/main.7469766e.chunk.js.map",
+    "main.css": "/project-dashboard/static/css/main.f717aba6.chunk.css",
+    "main.js": "/project-dashboard/static/js/main.d75f9c4d.chunk.js",
+    "main.js.map": "/project-dashboard/static/js/main.d75f9c4d.chunk.js.map",
     "runtime-main.js": "/project-dashboard/static/js/runtime-main.d9624b43.js",
     "runtime-main.js.map": "/project-dashboard/static/js/runtime-main.d9624b43.js.map",
-    "static/js/2.7c12bfe7.chunk.js": "/project-dashboard/static/js/2.7c12bfe7.chunk.js",
-    "static/js/2.7c12bfe7.chunk.js.map": "/project-dashboard/static/js/2.7c12bfe7.chunk.js.map",
+    "static/js/2.7ed3d49b.chunk.js": "/project-dashboard/static/js/2.7ed3d49b.chunk.js",
+    "static/js/2.7ed3d49b.chunk.js.map": "/project-dashboard/static/js/2.7ed3d49b.chunk.js.map",
     "index.html": "/project-dashboard/index.html",
-    "static/css/main.70d85a6c.chunk.css.map": "/project-dashboard/static/css/main.70d85a6c.chunk.css.map",
-    "static/js/2.7c12bfe7.chunk.js.LICENSE.txt": "/project-dashboard/static/js/2.7c12bfe7.chunk.js.LICENSE.txt",
+    "static/css/main.f717aba6.chunk.css.map": "/project-dashboard/static/css/main.f717aba6.chunk.css.map",
+    "static/js/2.7ed3d49b.chunk.js.LICENSE.txt": "/project-dashboard/static/js/2.7ed3d49b.chunk.js.LICENSE.txt",
     "static/media/style.css": "/project-dashboard/static/media/wind.a13ac805.png",
+    "static/media/fuse.b84ff826.svg": "/project-dashboard/static/media/fuse.b84ff826.svg",
     "static/media/main-graph.9c28e6fb.png": "/project-dashboard/static/media/main-graph.9c28e6fb.png",
-    "static/media/pie-graph.f0980628.png": "/project-dashboard/static/media/pie-graph.f0980628.png"
+    "static/media/pie-graph.f0980628.png": "/project-dashboard/static/media/pie-graph.f0980628.png",
+    "static/media/react.928f956d.svg": "/project-dashboard/static/media/react.928f956d.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d9624b43.js",
-    "static/js/2.7c12bfe7.chunk.js",
-    "static/css/main.70d85a6c.chunk.css",
-    "static/js/main.7469766e.chunk.js"
+    "static/js/2.7ed3d49b.chunk.js",
+    "static/css/main.f717aba6.chunk.css",
+    "static/js/main.d75f9c4d.chunk.js"
   ]
 }
