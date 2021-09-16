@@ -1,20 +1,14 @@
-.toolbar-wrapper {
+.toolbar {
     width: 100%;
     position: fixed;
-    z-index: 999;
-
-    .toolbar {
-        justify-content: space-between;
-        background-color: #fff;
-        width: 100%;
-        height: $toolbar-height;
-        box-shadow: $shadow;
-    }
-
-    .toolbar-inner {
-        width: 100%;
-        justify-content: space-between;
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    height: $toolbar-height;
+    box-shadow: $shadow;
+    z-index: 100;
+    padding-right: 64px;
 
     .chat {
         width: $chat-panel-width;
@@ -94,4 +88,8 @@
             }
         }
     }
+}
+
+.shifted {
+    padding-right: 344px;
 }

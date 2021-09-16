@@ -1,5 +1,6 @@
 import React from "react";
 import Avatar from "./Avatar";
+import chat from "../css/img/chat.png";
 
 const ChatPanel = ({ contacts }) => {
     const renderContacts = (contacts) => {
@@ -14,6 +15,7 @@ const ChatPanel = ({ contacts }) => {
     
     return (
         <ul className="chat-panel flex-column">
+            <div className="chat"><img src={chat} alt="chat" /></div>
             {renderContacts(important)}
             <div className="delimiter"></div>
             {renderContacts(other)}

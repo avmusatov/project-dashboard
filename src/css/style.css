@@ -137,32 +137,28 @@ table {
   border-spacing: 0;
 }
 
-.toolbar-wrapper {
+.toolbar {
   width: 100%;
   position: fixed;
-  z-index: 999;
-}
-.toolbar-wrapper .toolbar {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #fff;
-  width: 100%;
   height: 61px;
   box-shadow: 0px 0px 5px 1px #7070704f;
+  z-index: 100;
+  padding-right: 64px;
 }
-.toolbar-wrapper .toolbar-inner {
-  width: 100%;
-  justify-content: space-between;
-}
-.toolbar-wrapper .chat {
+.toolbar .chat {
   width: 68px;
   height: 63px;
   cursor: pointer;
 }
-.toolbar-wrapper .toolbar-item-group {
+.toolbar .toolbar-item-group {
   justify-content: left;
   padding: 0 16px;
 }
-.toolbar-wrapper .toolbar-item-group .icon-label {
+.toolbar .toolbar-item-group .icon-label {
   display: block;
   position: absolute;
   left: -50%;
@@ -176,29 +172,29 @@ table {
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 7px;
 }
-.toolbar-wrapper .toolbar-item-group .user-info {
+.toolbar .toolbar-item-group .user-info {
   position: relative;
   padding: 6px 16px;
   border-radius: 17px;
   cursor: pointer;
   font-size: 0.9rem;
 }
-.toolbar-wrapper .toolbar-item-group .user-info:hover {
+.toolbar .toolbar-item-group .user-info:hover {
   background-color: rgba(0, 0, 0, 0.04);
 }
-.toolbar-wrapper .toolbar-item-group .user-info .user-info-main {
+.toolbar .toolbar-item-group .user-info .user-info-main {
   padding-right: 15px;
   align-items: flex-end;
 }
-.toolbar-wrapper .toolbar-item-group .user-info .user-info-main .user-info-header {
+.toolbar .toolbar-item-group .user-info .user-info-main .user-info-header {
   font-weight: 700;
 }
-.toolbar-wrapper .toolbar-item-group .user-info img {
+.toolbar .toolbar-item-group .user-info img {
   width: 40px;
   height: 40px;
   border-radius: 20px;
 }
-.toolbar-wrapper .toolbar-item-group .user-info .login-menu {
+.toolbar .toolbar-item-group .user-info .login-menu {
   width: 100%;
   padding: 8px 0;
   position: absolute;
@@ -208,17 +204,21 @@ table {
   border-radius: 8px;
   box-shadow: 0px 0px 5px 1px #7070704f;
 }
-.toolbar-wrapper .toolbar-item-group .user-info .login-menu .login-menu-button {
+.toolbar .toolbar-item-group .user-info .login-menu .login-menu-button {
   justify-content: left;
   padding: 6px 16px;
   cursor: pointer;
   width: 100%;
 }
-.toolbar-wrapper .toolbar-item-group .user-info .login-menu .login-menu-button:hover {
+.toolbar .toolbar-item-group .user-info .login-menu .login-menu-button:hover {
   background-color: rgba(0, 0, 0, 0.04);
 }
-.toolbar-wrapper .toolbar-item-group .user-info .login-menu .login-menu-button .button-img {
+.toolbar .toolbar-item-group .user-info .login-menu .login-menu-button .button-img {
   margin-right: 10px;
+}
+
+.shifted {
+  padding-right: 344px;
 }
 
 .icon {
@@ -409,7 +409,6 @@ table {
 
 .chat-panel {
   position: fixed;
-  padding-top: 61px;
   left: calc(100% - 68px);
   width: 68px;
   z-index: 500;
@@ -510,7 +509,7 @@ table {
   cursor: default;
 }
 .main .widgets {
-  width: 80%;
+  width: 75%;
   padding: 16px 0;
   margin: 0 -16px;
 }
@@ -646,11 +645,11 @@ table {
   position: relative;
 }
 .widgets-section .widgets-column {
-  padding-top: 24px;
-  position: absolute;
-  top: -215px;
-  left: 80%;
-  width: 20%;
+  margin-left: 15px;
+  position: relative;
+  width: 280px;
+  top: -200px;
+  left: 0;
   z-index: 20;
 }
 
@@ -676,7 +675,7 @@ button {
 }
 
 .main-app {
-  position: relative;
+  display: flex;
   background-color: #f6f7f9;
 }
 
@@ -731,9 +730,25 @@ button {
   width: 25%;
 }
 
+.sidebar {
+  background: linear-gradient(to right, #252f3e 0%, #1b2330 100%);
+  width: 280px;
+  max-width: 280px;
+  min-width: 280px;
+}
+
+.app {
+  max-width: 100%;
+  overflow-y: scroll;
+}
+
+.hidden {
+  display: none;
+}
+
 @media (max-width: 1600px) {
   .container {
-    max-width: 90%;
+    max-width: 95%;
   }
 }
 @media (max-width: 1280px) {

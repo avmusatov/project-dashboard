@@ -1,6 +1,6 @@
 .header-wrapper {
     padding-top: $toolbar-height;
-    background: linear-gradient(to right, #252f3e 0%, #1b2330 100%);
+    background: $header-background;
     border-bottom-right-radius: 20px;
     background-size: cover;
     background-color: #1b2330;

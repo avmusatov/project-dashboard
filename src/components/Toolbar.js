@@ -1,7 +1,7 @@
 import React from "react";
 import Icon from "./Icon";
 import UserInfo from "./UserInfo";
-import chat from "../css/img/chat.png";
+
 
 export default class Toolbar extends React.Component {
     state = {
@@ -30,7 +30,6 @@ export default class Toolbar extends React.Component {
 
     render() {
         const iconsLeftProps = [
-            { type: "list", label: "List" },
             { type: "calendar", label: "Calendar" },
             { type: "mail", label: "Mail" },
             { type: "contact-book", label: "Contact" },
@@ -47,24 +46,23 @@ export default class Toolbar extends React.Component {
         ];
 
         return (
-            <div className="toolbar-wrapper">
-                <div
-                    className="toolbar flex-row-nowrap"
-                    onClick={this.toggleLoginMenu}>
-                    <div className="toolbar-inner flex-row-nowrap">
-                        <ul className="toolbar-item-group flex-row-nowrap">
-                            {this.renderIconsList(iconsLeftProps)}
-                        </ul>
-                        <ul className="toolbar-item-group flex-row-nowrap">
-                            {this.renderIconsList(iconsRightProps)}
-                            <li>
-                                <UserInfo {...this.props} {...this.state} />
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="chat"><img src={chat} alt="chat" /></div>
-                </div>
-            </div >
+            <div
+                className={`toolbar ${this.props.sidebarActive ? "shifted" : ""}`}
+                onClick={this.toggleLoginMenu}
+            >
+                <ul className="toolbar-item-group flex-row-nowrap">
+                    <li onClick={this.props.toggleSidebar}>
+                        <Icon type="list" label="List" />
+                    </li>
+                    {this.renderIconsList(iconsLeftProps)}
+                </ul>
+                <ul className="toolbar-item-group flex-row-nowrap">
+                    {this.renderIconsList(iconsRightProps)}
+                    <li>
+                        <UserInfo {...this.props.user} {...this.state} />
+                    </li>
+                </ul>
+            </div>
         );
     }
 }
