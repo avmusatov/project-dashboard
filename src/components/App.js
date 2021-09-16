@@ -11,14 +11,19 @@ export default class App extends React.Component {
     state = {
         user: {
             userName: "John Doe",
-            userImage,
-            userRole: "Guest"
+            userRole: "Guest",
+            userEmail: "johndoe@withinpixels.com",
+            userImage
         },
         sidebarActive: true,
     }
 
-    toggleSidebar = () => {
-        this.setState(({ sidebarActive }) => ({ sidebarActive: !sidebarActive }));
+    openSidebar = () => {
+        this.setState({ sidebarActive: true });
+    }
+
+    closeSidebar = () => {
+        this.setState({ sidebarActive: false });
     }
 
     render() {
@@ -26,9 +31,13 @@ export default class App extends React.Component {
 
         return (
             <div className="main-app">
-                <Sidebar sidebarActive={sidebarActive} />
+                <Sidebar
+                    sidebarActive={sidebarActive}
+                    closeSidebar={this.closeSidebar}
+                    user={user}
+                />
                 <div className="app">
-                    <Toolbar {...this.state} toggleSidebar={this.toggleSidebar} />
+                    <Toolbar {...this.state} openSidebar={this.openSidebar} />
                     <ChatPanel contacts={contacts} />
                     <Header {...user} />
                     <Main />

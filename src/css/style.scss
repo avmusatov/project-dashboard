@@ -5,6 +5,7 @@
 @import '_header.scss';
 @import '_chat-panel.scss';
 @import '_main.scss';
+@import '_sidebar.scss';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
@@ -85,16 +86,8 @@ button {
     width: 25%;
 }
 
-.sidebar {
-    background: $header-background;
-    width: 280px;
-    max-width: 280px;
-    min-width: 280px;
-}
-
 .app {
     max-width: 100%;
-    overflow-y: scroll;
 }
 
 .hidden {

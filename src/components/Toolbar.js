@@ -1,7 +1,7 @@
 import React from "react";
 import Icon from "./Icon";
 import UserInfo from "./UserInfo";
-
+import { toolbarIconsLeftProps, toolbarIconsRightProps } from "../helpers/render-data";
 
 export default class Toolbar extends React.Component {
     state = {
@@ -29,35 +29,21 @@ export default class Toolbar extends React.Component {
     }
 
     render() {
-        const iconsLeftProps = [
-            { type: "calendar", label: "Calendar" },
-            { type: "mail", label: "Mail" },
-            { type: "contact-book", label: "Contact" },
-            { type: "todolist", label: "ToDo list" },
-            { type: "star", label: "Start" },
-        ];
-
-        const iconsRightProps = [
-            { type: "font" },
-            { type: "fullscreen" },
-            { type: "search", label: "Search" },
-            { type: "bookmark" },
-            { type: "bell" },
-        ];
-
         return (
             <div
                 className={`toolbar ${this.props.sidebarActive ? "shifted" : ""}`}
                 onClick={this.toggleLoginMenu}
             >
                 <ul className="toolbar-item-group flex-row-nowrap">
-                    <li onClick={this.props.toggleSidebar}>
-                        <Icon type="list" label="List" />
-                    </li>
-                    {this.renderIconsList(iconsLeftProps)}
+                    {!this.props.sidebarActive
+                        ? <li onClick={this.props.openSidebar}>
+                            <Icon type="list" />
+                        </li>
+                        : null}
+                    {this.renderIconsList(toolbarIconsLeftProps)}
                 </ul>
                 <ul className="toolbar-item-group flex-row-nowrap">
-                    {this.renderIconsList(iconsRightProps)}
+                    {this.renderIconsList(toolbarIconsRightProps)}
                     <li>
                         <UserInfo {...this.props.user} {...this.state} />
                     </li>

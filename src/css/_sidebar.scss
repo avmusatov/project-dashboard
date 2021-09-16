@@ -1,0 +1,217 @@
+.sidebar {
+    background: $header-background;
+    width: 280px;
+    max-width: 280px;
+    min-width: 280px;
+    color: #fff;
+
+    &:hover {
+        overflow: auto;
+    }
+
+    .sidebar-logo {
+        max-width: 280px;
+        align-self: flex-start;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 16px;
+        width: 100%;
+        height: 64px;
+        position: fixed;
+        background-color: #1b2330;
+        z-index: 100;
+
+        .fuse-bar {
+            display: flex;
+            align-items: center;
+
+            .fuse-logo {
+                width: 24px;
+                height: 24px;
+            }
+
+            .fuse-caption {
+                font-size: 16px;
+                font-weight: 500;
+                margin: 0 12px;
+            }
+        }
+
+        .react-bar {
+            display: flex;
+            align-items: center;
+            padding: 4px 8px;
+            background-color: #000;
+            border-radius: 4px;
+
+            .react-logo {
+                width: 16px;
+            }
+
+            .react-caption {
+                padding: 0 4px;
+                font-size: 12px;
+                color: #61DAFB;
+            }
+        }
+
+        .close-sidebar {
+            width: 40px;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.11);
+            }
+        }
+    }
+
+    .sidebar-header {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #1b2330;
+        margin-bottom: 44px;
+        padding-top: 64px;
+
+        .sidebar-title {
+            padding: 34px 0 64px 0;
+
+            .username {
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 4px;
+            }
+
+            .user-email {
+                font-size: 13px;
+                font-weight: 500;
+                opacity: .5;
+            }
+        }
+
+        .user-avatar {
+            position: absolute;
+            bottom: -44px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 88px;
+            height: 88px;
+            background: $header-background;
+            border-radius: 40px;
+
+            img {
+                width: 72px;
+                height: 72px;
+                border-radius: 36px;
+            }
+        }
+    }
+
+    .sidebar-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 8px 12px;
+
+        .menu-section {
+            margin-top: 20px;
+
+            .section-title {
+                padding: 0 12px;
+                opacity: .6;
+                font-size: 13px;
+                font-weight: 600;
+                margin-bottom: 16px;
+            }
+
+            .menu-list {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .menu-item {
+                    position: relative;
+                    width: 100%;
+                    opacity: .5;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: left;
+                    align-items: center;
+                    padding: 12px 12px;
+                    cursor: pointer;
+                    border-radius: 5px;
+
+                    &.active {
+                        background-color: rgba(255, 255, 255, 0.116);
+                        opacity: 1;
+                        cursor: default;
+                    }
+
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.116);
+                        opacity: 1;
+                    }
+
+                    .menu-item-icon {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    .menu-item-title {
+                        font-size: 13px;
+                        font-weight: 500;
+                        margin-left: 16px;
+                    }
+
+                    .arrow {
+                        position: absolute;
+                        right: 12px;
+                        width: 10px;
+                        height: 10px;
+                    }
+
+                    .menu-item-notification {
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 10px;
+                        right: 12px;
+                        width: 20px;
+                        height: 20px;
+                        font-size: 12px;
+                        font-weight: 500;
+
+                        &.default {
+                            background-color: rgba(33, 150, 243, 0.5);
+                        }
+
+                        &.important {
+                            background-color: tomato;
+                        }
+                    }
+
+                }
+
+                .submenu {
+                    width: 100%;
+
+                    .submenu-item {
+                        margin-left: 36px;
+                    }
+                }
+            }
+        }
+    }
+}
