@@ -1,5 +1,6 @@
 # Example of the static interface
 You can see the [https://avmusatov.github.io/project-dashboard/](demo).
+
 That was implemented in React class components.
 
 # How to run
